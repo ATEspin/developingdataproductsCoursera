@@ -1,6 +1,6 @@
 library(shiny)
 shinyUI(fluidPage(
-  titlePanel("Predict the miles per galon of your classic car"),
+  titlePanel("Classic mpg predictor"),
   fluidRow(
     column(3,wellPanel(
       h4('This app predicts the milage per galon of classic cars from 1970 to 1982 by 
@@ -15,7 +15,8 @@ shinyUI(fluidPage(
       checkboxInput('ch_weight','Weight',value=T),
       checkboxInput('ch_acceleration','Acceleration',value=T),
       checkboxInput('ch_model_year','Model year',value=T),
-      h4('More information at:')
+      h4('More information at:'),
+      a("Auto MPG dataset", href="https://archive.ics.uci.edu/ml/datasets/auto+mpg")
     )),
     
     column(2,wellPanel(
